@@ -41,7 +41,14 @@ namespace Daene.Result.Errors
   public partial class Errors
   {{
 {string.Join("\n", errors.Select(error =>
-    $"    public static {error.Identifier} {error.Identifier}(string message) => new {error.Identifier}(message);"))}
+{
+    const string suffixToRemove = "Error";
+    var errorName = error.Identifier.Text;
+    var methodName = errorName.EndsWith(suffixToRemove)
+        ? errorName.Substring(0, errorName.Length - suffixToRemove.Length)
+        : errorName;
+    return $"    public static {errorName} {methodName}(string message) => new {errorName}(message);";
+}))}
   }}
 }}";
             context.AddSource("Errors.g.cs", source);
