@@ -1,6 +1,6 @@
 ﻿using DaeNe.Result;
 
-namespace Examples.Services;
+namespace Result.Examples.Services;
 
 public sealed class Service
 {

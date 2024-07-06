@@ -1,4 +1,4 @@
-﻿using Examples.Services;
+﻿using Result.Examples.Services;
 
 const int dividend = 10;
 const int divisor = 0;

@@ -20,7 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5F317D80-2B8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Result", "src\Result\Result.csproj", "{D4F277DF-4418-4C44-8F20-CCB5C8AE4DF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples.Services", "samples\Examples.Services\Examples.Services.csproj", "{CD1741A9-0D2C-44D5-80CF-F458B81E5CC7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Result.Examples.Services", "samples\Result.Examples.Services\Result.Examples.Services.csproj", "{CD1741A9-0D2C-44D5-80CF-F458B81E5CC7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{D28F386C-7FA6-4D04-8514-9BBEF9DD1E63}"
 EndProject
@@ -28,7 +28,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Result.SourceGenerator", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Result.Errors", "src\Result.Errors\Result.Errors.csproj", "{BB47C297-88B8-4A2D-9FB9-4A6FCDE92161}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example.CQRS", "samples\Example.CQRS\Example.CQRS.csproj", "{57CF2F84-ACAE-4C4B-8602-79AB3B5D531A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Result.Examples.CQRS", "samples\Result.Examples.CQRS\Result.Examples.CQRS.csproj", "{57CF2F84-ACAE-4C4B-8602-79AB3B5D531A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
