@@ -9,3 +9,6 @@ trim_trailing_whitespace = true
 
 [*.cs]
 indent_size = 4
+
+[*.g.cs]
+indent_size = 2
