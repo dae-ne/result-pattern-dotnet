@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples.Services", "sample
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{D28F386C-7FA6-4D04-8514-9BBEF9DD1E63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Result.SourceGenerator", "src\Result.SourceGenerator\Result.SourceGenerator.csproj", "{8FE976D1-F347-468A-9CC4-F82535ADF512}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D4F277DF-4418-4C44-8F20-CCB5C8AE4DF5} = {5F317D80-2B8C-4387-81C5-7A1D495DFEF2}
 		{CD1741A9-0D2C-44D5-80CF-F458B81E5CC7} = {D28F386C-7FA6-4D04-8514-9BBEF9DD1E63}
+		{8FE976D1-F347-468A-9CC4-F82535ADF512} = {5F317D80-2B8C-4387-81C5-7A1D495DFEF2}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D4F277DF-4418-4C44-8F20-CCB5C8AE4DF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -45,5 +48,9 @@ Global
 		{CD1741A9-0D2C-44D5-80CF-F458B81E5CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD1741A9-0D2C-44D5-80CF-F458B81E5CC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD1741A9-0D2C-44D5-80CF-F458B81E5CC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FE976D1-F347-468A-9CC4-F82535ADF512}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FE976D1-F347-468A-9CC4-F82535ADF512}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FE976D1-F347-468A-9CC4-F82535ADF512}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FE976D1-F347-468A-9CC4-F82535ADF512}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
