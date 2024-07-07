@@ -1,4 +1,4 @@
-﻿using DaeNe.Result.Errors;
+﻿using DaeNe.Result;
 
 namespace Result.Examples.CQRS.Errors;
 

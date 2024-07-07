@@ -1,6 +1,4 @@
-﻿using DaeNe.Result.Errors;
-
-namespace DaeNe.Result;
+﻿namespace DaeNe.Result;
 
 public readonly struct Result<TData>
 {
