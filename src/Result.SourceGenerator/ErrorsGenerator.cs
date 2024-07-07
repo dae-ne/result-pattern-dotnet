@@ -6,7 +6,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 namespace Result.SourceGenerator
 {
     [Generator]
-    public sealed class ErrorsSourceGenerator : ISourceGenerator
+    public sealed class ErrorsGenerator : ISourceGenerator
     {
         public void Initialize(GeneratorInitializationContext context)
         {
@@ -59,14 +59,28 @@ namespace DaeNe.Result
                     ? errorName.Substring(0, errorName.Length - suffixToRemove.Length)
                     : errorName;
 
-                var constructorParameters = error.ParameterList.Parameters
+                var primaryConstructorParameters = error.ParameterList?.Parameters
                     .Select(parameter => parameter.ToString())
+                    .ToList() ?? new List<string>();
+
+                var constructorParameters = error
+                    .DescendantNodes()
+                    .OfType<ConstructorDeclarationSyntax>()
+                    .Select(constructor => constructor.ParameterList.Parameters.Select(parameter => parameter.ToString()).ToList())
                     .ToList();
 
-                var methodParametersString = string.Join(", ", constructorParameters);
-                var passedParametersString = string.Join(", ", constructorParameters.Select(parameter => parameter.Split(' ')[1]));
+                constructorParameters = constructorParameters
+                    .Concat(new[] { primaryConstructorParameters })
+                    .Where(parameters => parameters.Any())
+                    .ToList();
 
-                return $"    public static {errorName} {methodName}({methodParametersString}) => new {errorName}({passedParametersString});";
+                return string.Join("\n", constructorParameters.Select(parameters =>
+                {
+                    var methodParametersString = string.Join(", ", parameters);
+                    var passedParametersString = string.Join(", ", parameters.Select(parameter => parameter.Split(' ')[1]));
+
+                    return $"    public static {errorName} {methodName}({methodParametersString}) => new {errorName}({passedParametersString});";
+                }));
             }))}";
     }
 }
