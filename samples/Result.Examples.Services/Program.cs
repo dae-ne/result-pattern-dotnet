@@ -6,10 +6,9 @@ const int divisor = 0;
 var service = new Service();
 
 // The result is a ServiceResult<int>. In this case, the divisor is zero, so the method
-// returns a failed result with no data. It returns an exception that can be accessed using
-// the GetError method.
+// returns a failed result with no data.
 var result = service.Divide(dividend, divisor);
 
 Console.WriteLine(result.IsSuccess
-    ? $"The result is {result.GetData()}."
-    : $"An error occurred: {result.GetError().Message}");
+    ? $"The result is {result.Data}."
+    : $"An error occurred: {result.Error!.Message}");

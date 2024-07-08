@@ -9,17 +9,15 @@ public readonly struct Result<TData>
     {
         _data = data;
         _error = default;
-        IsSuccess = true;
     }
 
     private Result(ErrorBase error)
     {
         _data = default;
         _error = error;
-        IsSuccess = false;
     }
 
-    private bool IsSuccess { get; }
+    private bool IsSuccess => _error is null;
 
     public static implicit operator Result<TData>(TData data) => new(data);
 
@@ -38,10 +36,9 @@ public readonly struct Result
     private Result(ErrorBase? error)
     {
         _error = error;
-        IsSuccess = error is null;
     }
 
-    private bool IsSuccess { get; }
+    private bool IsSuccess => _error is null;
 
     public static implicit operator Result(ErrorBase error) => new(error);
 
