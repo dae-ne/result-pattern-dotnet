@@ -24,7 +24,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Result.Examples.Services", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{D28F386C-7FA6-4D04-8514-9BBEF9DD1E63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Result.SourceGenerator", "src\Result.SourceGenerator\Result.SourceGenerator.csproj", "{8FE976D1-F347-468A-9CC4-F82535ADF512}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Result.Errors.Generator", "src\Result.Errors.Generator\Result.Errors.Generator.csproj", "{8FE976D1-F347-468A-9CC4-F82535ADF512}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Result.Examples.CQRS", "samples\Result.Examples.CQRS\Result.Examples.CQRS.csproj", "{57CF2F84-ACAE-4C4B-8602-79AB3B5D531A}"
 EndProject

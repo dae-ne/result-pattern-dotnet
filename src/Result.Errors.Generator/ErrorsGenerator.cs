@@ -4,7 +4,7 @@ using System.Threading;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace Result.SourceGenerator;
+namespace Result.Errors.Generator;
 
 [Generator]
 public class ErrorsGenerator : IIncrementalGenerator
